@@ -1,0 +1,671 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kaizen Torch Awards | One Soul at a Time</title>
+  <meta name="description" content="Celebrating coaches who help lives change every single day. Share the impact of your work and show the world what coaching can make possible." />
+  <meta name="theme-color" content="#070606" />
+  <link rel="icon" type="image/png" href="img/brand/favicon.png" />
+  <link rel="apple-touch-icon" href="img/brand/apple-touch-icon.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Kaizen Torch Awards" />
+  <meta property="og:title" content="Kaizen Torch Awards | One Soul at a Time" />
+  <meta property="og:description" content="Celebrating coaches who help lives change every single day. Share the impact of your work and show the world what coaching can make possible." />
+  <meta property="og:image" content="img/brand/og-one-soul-coin.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body class="is-loading">
+
+  <!-- ============ PRELOADER ============ -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader__panel preloader__panel--top"></div>
+    <div class="preloader__panel preloader__panel--bottom"></div>
+    <div class="preloader__inner">
+      <div class="preloader__emblem">
+        <svg class="preloader__ring" viewBox="0 0 200 200">
+          <circle cx="100" cy="100" r="94" class="preloader__ring-bg" />
+          <circle cx="100" cy="100" r="94" class="preloader__ring-fg" id="preloaderRing" />
+        </svg>
+        <img src="img/brand/sun-emblem.png" alt="" />
+      </div>
+      <p class="preloader__word">Kaizen Torch</p>
+      <p class="preloader__count"><span id="preloaderCount">0</span>%</p>
+    </div>
+  </div>
+
+  <!-- ============ CURSOR + PROGRESS ============ -->
+  <div class="cursor" aria-hidden="true"><div class="cursor__ring"></div><div class="cursor__dot"></div><span class="cursor__label"></span></div>
+  <div class="scroll-progress" aria-hidden="true"><span id="scrollProgress"></span></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="nav" id="nav">
+    <a href="#top" class="nav__brand" data-scroll>
+      <img src="img/brand/sun-logo-sm.png" alt="" width="40" height="40" />
+      <span class="nav__brand-text">Kaizen Torch<small>Awards</small></span>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#recognition" data-scroll>Awards</a>
+      <a href="#categories" data-scroll>Categories</a>
+      <a href="#dates" data-scroll>Key dates</a>
+      <a href="#jury" data-scroll>Jury</a>
+      <a href="#ecosystem" data-scroll>Ecosystem</a>
+      <a href="#podcast" data-scroll>Podcast</a>
+      <a href="#faq" data-scroll>FAQ</a>
+    </nav>
+    <a class="btn btn--gold btn--sm nav__cta magnetic" href="https://kaizentorch.com/mca-entry-kit/" target="_blank" rel="noopener"><span>Enter the Awards</span></a>
+    <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span></button>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav aria-label="Mobile">
+      <a href="#recognition" data-scroll>Awards</a>
+      <a href="#categories" data-scroll>Categories</a>
+      <a href="#dates" data-scroll>Key dates</a>
+      <a href="#jury" data-scroll>Jury</a>
+      <a href="#ecosystem" data-scroll>Ecosystem</a>
+      <a href="#podcast" data-scroll>Podcast</a>
+      <a href="#faq" data-scroll>FAQ</a>
+    </nav>
+    <a class="btn btn--gold" href="https://kaizentorch.com/mca-entry-kit/" target="_blank" rel="noopener"><span>Enter the Awards</span></a>
+    <p class="mobile-menu__foot">One soul at a time.</p>
+  </div>
+
+  <main id="top">
+
+    <!-- ============ HERO (3D) ============ -->
+    <section class="hero" id="hero">
+      <canvas class="hero__canvas" id="heroCanvas" aria-hidden="true"></canvas>
+      <div class="hero__fallback" aria-hidden="true"><img src="img/coin/coin-front.png" alt="" /></div>
+      <div class="hero__vignette" aria-hidden="true"></div>
+
+      <div class="hero__content container">
+        <p class="eyebrow hero__eyebrow"><span class="dot"></span> Inaugural Awards · 2026 — 2027</p>
+        <h1 class="hero__title">
+          <span class="line"><span class="line__inner">One Soul</span></span>
+          <span class="line"><span class="line__inner"><em>at a</em> Time.</span></span>
+        </h1>
+        <p class="hero__lead">Celebrating coaches who help lives change every single day. Share the impact of your work and show the world what coaching can make possible.</p>
+        <div class="hero__actions">
+          <a class="btn btn--gold magnetic" href="https://kaizentorch.com/mca-entry-kit/" target="_blank" rel="noopener"><span>Enter the Awards</span><i class="btn__arrow">→</i></a>
+          <a class="btn btn--ghost magnetic" href="#categories" data-scroll><span>Explore categories</span></a>
+        </div>
+        <div class="hero__meta">
+          <div class="countdown" data-countdown="2026-12-12T18:00:00+04:00">
+            <p class="countdown__label">Entries close · 12 Dec 2026 · 6:00 p.m. UAE</p>
+            <div class="countdown__units">
+              <div><b data-u="d">00</b><span>Days</span></div>
+              <div><b data-u="h">00</b><span>Hours</span></div>
+              <div><b data-u="m">00</b><span>Min</span></div>
+              <div><b data-u="s">00</b><span>Sec</span></div>
+            </div>
+          </div>
+          <p class="hero__free">Free to enter for eligible coaches worldwide.<br />Recognition earned through independent judging.</p>
+        </div>
+      </div>
+
+      <a href="#manifesto" class="hero__scroll" data-scroll aria-label="Scroll to discover">
+        <span>Scroll</span><i></i>
+      </a>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Life</span><b>✦</b><span>Health &amp; Well-being</span><b>✦</b><span>Business &amp; Executive</span><b>✦</b><span>Teams &amp; Organisations</span><b>✦</b><span><em>One soul at a time</em></span><b>✦</b>
+        <span>Life</span><b>✦</b><span>Health &amp; Well-being</span><b>✦</b><span>Business &amp; Executive</span><b>✦</b><span>Teams &amp; Organisations</span><b>✦</b><span><em>One soul at a time</em></span><b>✦</b>
+      </div>
+    </div>
+
+    <!-- ============ MANIFESTO ============ -->
+    <section class="manifesto section" id="manifesto">
+      <div class="container">
+        <p class="eyebrow" data-reveal>Our belief</p>
+        <p class="manifesto__text" data-words>
+          The Kaizen Torch Awards were created for the coaches <strong>who help others every single day.</strong>
+          We believe the work you do deserves to be <strong>seen, celebrated, and shared</strong> — and that the stories of winning entries can help
+          <strong>make the world we live in a little bit better.</strong>
+        </p>
+      </div>
+      <div class="manifesto__sun" aria-hidden="true"><img src="img/brand/sun-emblem.png" alt="" /></div>
+    </section>
+
+    <!-- ============ PURPOSE ============ -->
+    <section class="purpose section" id="purpose">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow" data-reveal>Our purpose</p>
+          <h2 class="h2" data-split>Bring stories of transformation <em>to light.</em></h2>
+          <p class="lead" data-reveal>Every day, coaches help people find their way forward in life, health, business and organisations. Much of that work happens quietly. <span class="gold">One conversation. One breakthrough. One soul at a time.</span></p>
+        </div>
+        <div class="purpose__grid">
+          <article class="tilt-card" data-reveal>
+            <div class="tilt-card__glare"></div>
+            <span class="tilt-card__num">01</span>
+            <h3>Show what coaching can do</h3>
+            <p>Through the stories of winning entries, we want to make coaching’s impact visible and inspire people to see what is possible in their own lives.</p>
+          </article>
+          <article class="tilt-card" data-reveal>
+            <div class="tilt-card__glare"></div>
+            <span class="tilt-card__num">02</span>
+            <h3>Raise the standards of coaching worldwide</h3>
+            <p>Celebrate thoughtful practice and meaningful impact, encouraging excellence across the profession.</p>
+          </article>
+          <article class="tilt-card" data-reveal>
+            <div class="tilt-card__glare"></div>
+            <span class="tilt-card__num">03</span>
+            <h3>Recognise the coaches helping lives change</h3>
+            <p>Honour the people supporting growth and transformation every day, often beyond the spotlight.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ AMBITION (pinned) ============ -->
+    <section class="ambition" id="ambition">
+      <div class="ambition__stage">
+        <div class="ambition__media">
+          <img src="img/collab/venues.jpg" alt="A grand ballroom prepared for the Kaizen Torch ceremony" />
+        </div>
+        <div class="ambition__shade"></div>
+        <div class="ambition__copy container">
+          <p class="eyebrow">Our ambition</p>
+          <p class="ambition__pre">To become the</p>
+          <h2 class="ambition__title"><span>“Oscars</span> <span>of coaching”</span></h2>
+          <p class="ambition__post">a global celebration of coaching excellence and human possibility.</p>
+          <p class="ambition__note">Every story we share could be the beginning of someone else’s transformation.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WHY ENTER ============ -->
+    <section class="why section" id="why">
+      <div class="container why__wrap">
+        <div class="why__intro">
+          <p class="eyebrow" data-reveal>Why enter</p>
+          <h2 class="h2" data-split>The difference you make deserves <em>to be seen.</em></h2>
+          <p class="lead" data-reveal>You see the moments that matter: someone finding their confidence, a leader changing how they lead, a team learning to move forward together. Entering is an opportunity to bring that work into view.</p>
+        </div>
+        <ol class="why__list">
+          <li data-reveal>
+            <span class="why__n">I</span>
+            <div><h3>Build credibility through your work</h3><p>Put the quality, care and impact of your coaching before experienced judges. An award distinction can give prospective clients and organisations another reason to take a closer look at your practice.</p></div>
+          </li>
+          <li data-reveal>
+            <span class="why__n">II</span>
+            <div><h3>Your impact can inspire change beyond your coaching</h3><p>We want to share the stories of winning entries to show people that change is possible for them too. What you help one person discover could give another the courage to begin.</p></div>
+          </li>
+          <li data-reveal>
+            <span class="why__n">III</span>
+            <div><h3>Help shape what coaching stands for</h3><p>Your entry contributes to a wider conversation about thoughtful practice, evidence and meaningful change, recognising work delivered with care, commitment and integrity.</p></div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ RECOGNITION ============ -->
+    <section class="recognition section" id="recognition">
+      <div class="recognition__spot" aria-hidden="true"></div>
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="eyebrow" data-reveal>The recognition</p>
+          <h2 class="h2" data-split>Recognition that honours <em>the impact of your work.</em></h2>
+          <p class="lead" data-reveal>From the shortlist to Gold, Silver and Bronze distinctions, recognition is earned through independent assessment of your coaching work and its demonstrated impact.</p>
+        </div>
+
+        <div class="crowns" id="crowns">
+          <div class="crowns__stage">
+            <div class="crowns__halo" aria-hidden="true"></div>
+            <figure class="crown is-active" data-crown="gold"><img src="img/crowns/crown-gold.png" alt="The Kaizen Torch gold crown" /></figure>
+            <figure class="crown" data-crown="silver"><img src="img/crowns/crown-silver.png" alt="The Kaizen Torch silver crown" /></figure>
+            <figure class="crown" data-crown="bronze"><img src="img/crowns/crown-bronze.png" alt="The Kaizen Torch bronze crown" /></figure>
+            <div class="crowns__floor" aria-hidden="true"></div>
+          </div>
+          <div class="crowns__tabs" role="tablist" aria-label="Distinction">
+            <button role="tab" aria-selected="true" data-crown-btn="gold"><i class="sw sw--gold"></i>Gold</button>
+            <button role="tab" aria-selected="false" data-crown-btn="silver"><i class="sw sw--silver"></i>Silver</button>
+            <button role="tab" aria-selected="false" data-crown-btn="bronze"><i class="sw sw--bronze"></i>Bronze</button>
+          </div>
+          <p class="crowns__caption"><strong>The Kaizen Torch crown.</strong> A symbol of earned achievement.</p>
+        </div>
+
+        <div class="reco-grid">
+          <article class="reco-card reco-card--coin" data-reveal>
+            <div class="coin3d" id="coinFlip" tabindex="0" role="button" aria-label="Flip the Kaizen Torch coin">
+              <div class="coin3d__inner">
+                <img class="coin3d__face coin3d__face--front" src="img/coin/coin-front.png" alt="Gold coin with the Kaizen Torch sun" />
+                <img class="coin3d__face coin3d__face--back" src="img/coin/coin-back.png" alt="Gold coin engraved with One soul at a time" />
+              </div>
+            </div>
+            <h3>The Kaizen Torch coin</h3>
+            <p>An anchor for the days you need to remember — a reminder of how far you have come and the lives you have helped change.</p>
+            <span class="hint">Tap to flip</span>
+          </article>
+          <article class="reco-card" data-reveal>
+            <div class="cert" aria-hidden="true">
+              <div class="cert__paper">
+                <img src="img/brand/sun-logo-sm.png" alt="" />
+                <span class="cert__k">Certificate of Achievement</span>
+                <span class="cert__name">Your Name</span>
+                <span class="cert__line"></span>
+                <span class="cert__sub">Kaizen Torch Awards · 2027</span>
+              </div>
+            </div>
+            <h3>A digital Certificate of Achievement</h3>
+            <p>Every award winner receives a digital Certificate of Achievement.</p>
+          </article>
+          <article class="reco-card" data-reveal>
+            <div class="post" aria-hidden="true">
+              <div class="post__head"><img src="img/brand/sun-logo-sm.png" alt="" /><span>kaizentorch</span></div>
+              <div class="post__img"><img src="img/crowns/crown-gold.png" alt="" /><b>Gold Winner</b></div>
+              <div class="post__foot"><i>♥</i><i>✦</i><i>↗</i></div>
+            </div>
+            <h3>Recognition you can share</h3>
+            <p>Recognition on the Kaizen Torch Awards website and an individual recognition post on Kaizen Torch’s social media.</p>
+          </article>
+        </div>
+        <p class="fineprint" data-reveal>No payment is required for these benefits. Shortlisted entrants also receive an individual recognition post. Physical crowns, coins and printed certificates are arranged separately.</p>
+      </div>
+    </section>
+
+    <!-- ============ CATEGORIES ============ -->
+    <section class="categories section" id="categories">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow" data-reveal>Award categories</p>
+          <h2 class="h2" data-split>Find the category <em>for your work.</em></h2>
+          <p class="lead" data-reveal>Four award areas. Fifty-six specialisms. Choose one main coaching category per entry, then select all relevant subcategories within it. A subcategory activates when it receives four or more entries.</p>
+        </div>
+
+        <div class="cat-tabs" role="tablist" aria-label="Main categories" id="catTabs"></div>
+        <div class="cat-panel" id="catPanel" role="tabpanel" aria-live="polite">
+          <div class="cat-panel__media"><img id="catImg" src="img/field/field-rel-still-open-1080.jpg" alt="" /><span class="cat-panel__index" id="catIndex">01</span></div>
+          <div class="cat-panel__body">
+            <h3 class="cat-panel__title" id="catTitle">Life</h3>
+            <p class="cat-panel__blurb" id="catBlurb"></p>
+            <div class="cat-panel__elig"><span class="eyebrow">Who can enter</span><p id="catElig"></p></div>
+            <div class="chips" id="catChips"></div>
+            <div class="cat-detail" id="catDetail">
+              <h4 id="catDetailName"></h4>
+              <p id="catDetailDesc"></p>
+              <p class="cat-detail__who"><span>Ideal entrants ·</span> <span id="catDetailWho"></span></p>
+            </div>
+            <a class="btn btn--line" id="catKit" href="#" download><span>Download the Entry Kit</span><i class="btn__arrow">↓</i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ KEY DATES (horizontal) ============ -->
+    <section class="dates" id="dates">
+      <div class="dates__pin">
+        <div class="container dates__head">
+          <p class="eyebrow">Key dates</p>
+          <h2 class="h2">The year, <em>in sequence.</em></h2>
+        </div>
+        <div class="dates__viewport">
+          <div class="dates__track" id="datesTrack">
+            <div class="dates__line"><span id="datesLine"></span></div>
+            <article class="date-card">
+              <span class="date-card__node"></span>
+              <span class="date-card__step">01</span>
+              <h3>Entries open</h3>
+              <p class="date-card__date">Open now</p>
+              <p>Entry is free for eligible coaches worldwide.</p>
+            </article>
+            <article class="date-card date-card--hot">
+              <span class="date-card__node"></span>
+              <span class="date-card__step">02</span>
+              <h3>Entry deadline</h3>
+              <p class="date-card__date">12 December 2026</p>
+              <p>6:00 p.m. UAE time (UTC+4).</p>
+            </article>
+            <article class="date-card">
+              <span class="date-card__node"></span>
+              <span class="date-card__step">03</span>
+              <h3>Round 1 judging</h3>
+              <p class="date-card__date">16 Dec 2026 – 17 Jan 2027</p>
+              <p>Written entry assessment by at least four independent jurors.</p>
+            </article>
+            <article class="date-card">
+              <span class="date-card__node"></span>
+              <span class="date-card__step">04</span>
+              <h3>Round 2 judging</h3>
+              <p class="date-card__date">10 Feb – 14 Mar 2027</p>
+              <p>Virtual Impact Exchange for shortlisted entrants.</p>
+            </article>
+            <article class="date-card date-card--final">
+              <span class="date-card__node"></span>
+              <span class="date-card__step">05</span>
+              <h3>Awards celebration</h3>
+              <p class="date-card__date">25 March 2027</p>
+              <p>Virtual or Dubai · format to be confirmed. Winners announced the same day through official online channels.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ JUDGING ============ -->
+    <section class="judging section" id="judging">
+      <div class="container judging__wrap">
+        <div>
+          <p class="eyebrow" data-reveal>Why trust it?</p>
+          <h2 class="h2" data-split>Expertise to recognise <em>meaningful impact.</em></h2>
+          <p class="lead" data-reveal>Our judging panel brings together experienced coaches and practitioners, including doctoral-qualified professionals, ICF Master Certified Coaches and EMCC-accredited practitioners. Each entry is assessed independently by at least four Round 1 jurors, with conflict-of-interest safeguards.</p>
+        </div>
+        <div class="criteria" id="criteria">
+          <div class="criterion" data-value="35"><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="52" class="track"/><circle cx="60" cy="60" r="52" class="bar"/></svg><b><span class="count">0</span>%</b><p>Client Impact / Result</p></div>
+          <div class="criterion" data-value="35"><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="52" class="track"/><circle cx="60" cy="60" r="52" class="bar"/></svg><b><span class="count">0</span>%</b><p>Sustainable Impact</p></div>
+          <div class="criterion" data-value="25"><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="52" class="track"/><circle cx="60" cy="60" r="52" class="bar"/></svg><b><span class="count">0</span>%</b><p>Problem / Challenge</p></div>
+          <div class="criterion" data-value="5"><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="52" class="track"/><circle cx="60" cy="60" r="52" class="bar"/></svg><b><span class="count">0</span>%</b><p>Testimonial / Feedback</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ JURY (3D ring) ============ -->
+    <section class="jury section" id="jury">
+      <video class="jury__globe" src="media/globe.mp4" poster="img/immersive/globe-poster.webp" muted loop playsinline preload="none" aria-hidden="true"></video>
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="eyebrow" data-reveal>The Kaizen Torch Mastermind</p>
+          <h2 class="h2" data-split>Meet <em>the Architects.</em></h2>
+          <p class="lead" data-reveal>44 practitioners. Different cultures, disciplines, experiences and perspectives — brought together by a shared curiosity about human transformation and what we have yet to discover.</p>
+        </div>
+      </div>
+      <div class="ring-stage" id="ringStage" data-cursor="Drag">
+        <div class="ring" id="ringA"></div>
+        <div class="ring ring--b" id="ringB"></div>
+      </div>
+      <div class="container jury__foot">
+        <p class="jury__hint">Drag to spin · Select a portrait to read more</p>
+        <div class="jury__actions">
+          <button class="btn btn--line" id="juryToggle" aria-expanded="false" aria-controls="juryGrid"><span>View all 44 jurors</span></button>
+          <a class="btn btn--ghost" href="https://kaizentorch.com/judge-register/" target="_blank" rel="noopener"><span>Jury registration for next year</span></a>
+        </div>
+        <div class="jury-grid" id="juryGrid" hidden></div>
+      </div>
+    </section>
+
+    <!-- ============ HOW TO ENTER ============ -->
+    <section class="enter section" id="enter">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow" data-reveal>How to enter</p>
+          <h2 class="h2" data-split>Three steps to <em>share your impact.</em></h2>
+        </div>
+        <div class="steps">
+          <article class="step" data-reveal>
+            <span class="step__n">1</span>
+            <h3>Choose your category</h3>
+            <p>Explore the four main coaching categories and check their eligibility requirements. Your entry may present one particularly impactful client story or coaching work involving multiple clients within a specific niche, supported by clear evidence of outcomes.</p>
+            <a href="#categories" data-scroll class="link">Browse categories →</a>
+          </article>
+          <article class="step" data-reveal>
+            <span class="step__n">2</span>
+            <h3>Prepare your entry</h3>
+            <p>Read your category’s entry kit and download the preparation checklist. Explain the challenges your client faced, the coaching you delivered and the results achieved. All submissions must be in English.</p>
+            <a href="downloads/kaizen-torch-awards-entry-checklist.pdf" download class="link">Download entry checklist ↓</a>
+          </article>
+          <article class="step" data-reveal>
+            <span class="step__n">3</span>
+            <h3>Submit your entry</h3>
+            <p>Complete the official submission form and submit by 12 December 2026 at 6:00 p.m. UAE time (UTC+4). Entry is free for applicants who meet the published eligibility requirements. Entry-support calls are optional.</p>
+            <a href="https://calendly.com/marianne-kaizentorch" target="_blank" rel="noopener" class="link">Book an optional call ↗</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STORIES (horizontal) ============ -->
+    <section class="stories" id="stories">
+      <div class="stories__pin">
+        <div class="container stories__head">
+          <div>
+            <p class="eyebrow">Fictional impact stories</p>
+            <h2 class="h2">The stories we hope <em>to bring to light.</em></h2>
+          </div>
+          <p class="stories__disclaimer">These fictional stories illustrate the kinds of coaching impact we hope to discover and share. All coaches, clients, and circumstances are invented. They are not actual entries, winners, or testimonials.</p>
+        </div>
+        <div class="stories__track" id="storiesTrack"></div>
+      </div>
+    </section>
+
+    <!-- ============ ECOSYSTEM / PORTALS ============ -->
+    <section class="ecosystem section" id="ecosystem">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="eyebrow" data-reveal>The living field</p>
+          <h2 class="h2" data-split>Seven portals. <em>One connected ecosystem.</em></h2>
+          <p class="lead" data-reveal>Kaizen Torch exists to create spaces, experiences and conversations that invite people to look inward, question what they have accepted as fixed, and reconnect with possibilities they may have forgotten were there. Begin with what speaks to you.</p>
+        </div>
+        <div class="portals" id="portals"></div>
+      </div>
+    </section>
+
+    <!-- ============ PODCAST ============ -->
+    <section class="podcast section" id="podcast">
+      <div class="container podcast__wrap">
+        <div class="podcast__player">
+          <div class="record" id="record">
+            <div class="record__sleeve">
+              <img id="sleeveImg" src="img/podcast/deborah-george-feres.jpg" alt="" />
+              <div class="record__sleeve-text">
+                <span class="record__brand">Kaizen Torch Podcast</span>
+                <span class="record__title" id="sleeveTitle">Who Am I Now?</span>
+                <span class="record__guest" id="sleeveGuest">Dr. Deborah George-Feres</span>
+              </div>
+            </div>
+            <div class="record__disc" id="disc">
+              <div class="record__grooves"></div>
+              <div class="record__label"><img id="labelImg" src="img/podcast/deborah-george-feres.jpg" alt="" /><i></i></div>
+            </div>
+          </div>
+          <div class="record__sides">
+            <div><span class="eyebrow">Side A · The conversation begins</span><ul id="sideA"></ul></div>
+            <div><span class="eyebrow">Side B · The conversation deepens</span><ul id="sideB"></ul></div>
+          </div>
+        </div>
+        <div class="podcast__info">
+          <p class="eyebrow" data-reveal>The listening room</p>
+          <h2 class="h2" data-split>Depth over noise. <em>Conversations that stay with you.</em></h2>
+          <p class="lead" data-reveal>Long-form dialogues with coaches, practitioners, and experts: the ideas, questions, and lived experience behind their work, without rushing toward a tidy answer.</p>
+          <ol class="episodes" id="episodes"></ol>
+          <a class="btn btn--gold magnetic" href="https://www.youtube.com/@KaizenTorch" target="_blank" rel="noopener"><span>Watch the Podcast</span><i class="btn__arrow">▶</i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ NOTE FROM THE TEAM ============ -->
+    <section class="note section" id="story">
+      <div class="container note__wrap">
+        <p class="eyebrow" data-reveal>A note from the Kaizen Torch team</p>
+        <div class="note__lines">
+          <p class="note__line">At the heart of Kaizen Torch is a deep knowing of the power of coaching and the possibilities that open when we reconnect with ourselves.</p>
+          <p class="note__line">We know that change can begin within one person and reach far beyond them — into their relationships, their work, their communities, and the lives they touch.</p>
+        </div>
+        <blockquote class="note__quote" data-reveal>
+          <p>“If we could change ourselves, the tendencies in the world would also change.”</p>
+          <cite>— Mahatma Gandhi</cite>
+        </blockquote>
+        <div class="note__lines">
+          <p class="note__line">This is why Kaizen Torch exists: to offer spaces where every soul can remember the power they carry within.</p>
+          <p class="note__line note__line--big">Imagine the world <em>we could create together.</em></p>
+        </div>
+        <p class="note__sign" data-reveal>The Kaizen Torch Team</p>
+      </div>
+    </section>
+
+    <!-- ============ TEAM ============ -->
+    <section class="team section" id="team">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow" data-reveal>The journey with Kaizen Torch</p>
+          <h2 class="h2" data-split>The people <em>carrying the Torch.</em></h2>
+        </div>
+        <div class="team__grid" id="teamGrid"></div>
+      </div>
+    </section>
+
+    <!-- ============ PRESS ============ -->
+    <section class="press" aria-label="As seen on">
+      <p class="eyebrow">As seen on</p>
+      <div class="press__marquee">
+        <div class="press__track">
+          <img src="img/press/abc.png" alt="ABC" /><img src="img/press/cbs.png" alt="CBS" /><img src="img/press/fox.png" alt="FOX" /><img src="img/press/ap.png" alt="AP" /><img src="img/press/google.png" alt="Google News" /><img src="img/press/menafn.png" alt="MENAFN" /><img src="img/press/nlr.png" alt="NLR" />
+          <img src="img/press/abc.png" alt="" /><img src="img/press/cbs.png" alt="" /><img src="img/press/fox.png" alt="" /><img src="img/press/ap.png" alt="" /><img src="img/press/google.png" alt="" /><img src="img/press/menafn.png" alt="" /><img src="img/press/nlr.png" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ COLLABORATE ============ -->
+    <section class="collab section" id="collaborate">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow" data-reveal>Collaboration opportunities</p>
+          <h2 class="h2" data-split>Help bring coaching impact <em>into view.</em></h2>
+          <p class="lead" data-reveal>Your organisation can help us recognise meaningful coaching work and share stories that inspire human possibility. Sponsorship and collaboration do not confer award status or influence eligibility, judging, shortlisting or results.</p>
+        </div>
+        <div class="collab__grid" id="collabGrid"></div>
+        <div class="collab__cta" data-reveal>
+          <p class="collab__slogan">Share the Torch. <em>One soul at a time.</em></p>
+          <a class="btn btn--gold magnetic" href="mailto:hello@kaizentorch.com?subject=Kaizen%20Torch%20%E2%80%94%20Collaboration%20Opportunities"><span>Request the collaboration guide</span><i class="btn__arrow">→</i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="faq section" id="faq">
+      <div class="container faq__wrap">
+        <div class="faq__intro">
+          <p class="eyebrow" data-reveal>Before you enter</p>
+          <h2 class="h2" data-split>Questions, <em>answered.</em></h2>
+          <p class="lead" data-reveal>Guidance on categories, preparing your entry, judging and the Awards timeline.</p>
+          <a class="link" href="mailto:hello@kaizentorch.com?subject=Kaizen%20Torch%20Awards%20%E2%80%94%20Entry%20Enquiry">Still have a question? hello@kaizentorch.com →</a>
+        </div>
+        <div class="faq__list" id="faqList"></div>
+      </div>
+    </section>
+
+    <!-- ============ FINAL CTA ============ -->
+    <section class="final" id="final">
+      <div class="final__rays" aria-hidden="true"></div>
+      <div class="final__coin" aria-hidden="true">
+        <div class="spin-coin">
+          <img class="spin-coin__f" src="img/coin/coin-front.png" alt="" />
+          <img class="spin-coin__b" src="img/coin/coin-back.png" alt="" />
+        </div>
+      </div>
+      <div class="container final__copy">
+        <h2 class="final__title" data-split>Ready to share <em>the impact of your work?</em></h2>
+        <p class="lead">Entry is free for eligible coaches worldwide. Review your category’s eligibility requirements, prepare your entry and submit by <strong>12 December 2026 at 6:00 p.m. UAE time</strong>. Travel, attendance and purchases are optional.</p>
+        <div class="hero__actions final__actions">
+          <a class="btn btn--gold btn--lg magnetic" href="https://kaizentorch.com/mca-entry-kit/" target="_blank" rel="noopener"><span>Enter the Awards</span><i class="btn__arrow">→</i></a>
+          <a class="btn btn--ghost magnetic" href="mailto:hello@kaizentorch.com?subject=Kaizen%20Torch%20Awards%20%E2%80%94%20Entry%20Enquiry"><span>Ask an entry question</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__top">
+      <div class="footer__brand">
+        <img src="img/brand/sun-emblem.png" alt="Kaizen Torch sun emblem" width="96" height="96" loading="lazy" />
+        <p class="footer__word">Kaizen Torch</p>
+        <p>A global ecosystem for human growth, recognition, learning, experiences, and organisational transformation. Meaningful growth is never finished.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Explore</h4>
+        <a href="#recognition" data-scroll>Awards</a>
+        <a href="#categories" data-scroll>Categories</a>
+        <a href="#jury" data-scroll>The Architects</a>
+        <a href="#ecosystem" data-scroll>Seven portals</a>
+        <a href="#podcast" data-scroll>Podcast</a>
+      </div>
+      <div class="footer__col">
+        <h4>Enter</h4>
+        <a href="https://kaizentorch.com/mca-entry-kit/" target="_blank" rel="noopener">Enter the Awards</a>
+        <a href="downloads/kaizen-torch-awards-entry-checklist.pdf" download>Entry checklist</a>
+        <a href="https://calendly.com/marianne-kaizentorch" target="_blank" rel="noopener">Book an optional call</a>
+        <a href="https://kaizentorch.com/judge-register/" target="_blank" rel="noopener">Jury registration</a>
+      </div>
+      <div class="footer__col">
+        <h4>Connect</h4>
+        <a href="mailto:hello@kaizentorch.com">hello@kaizentorch.com</a>
+        <div class="socials">
+          <a href="https://www.youtube.com/@KaizenTorch" target="_blank" rel="noopener" aria-label="Kaizen Torch on YouTube"><svg viewBox="0 0 24 24"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .6 12a31 31 0 0 0 .4 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .4-4.8 31 31 0 0 0-.4-4.8zM9.8 15.1V8.9L15.6 12z"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=61566863597720" target="_blank" rel="noopener" aria-label="Kaizen Torch on Facebook"><svg viewBox="0 0 24 24"><path d="M14 8V6.2c0-.8.2-1.2 1.4-1.2H17V2h-2.6C11.3 2 10.3 3.5 10.3 6v2H8v3h2.3v11H14V11h2.6l.4-3z"/></svg></a>
+          <a href="https://www.instagram.com/kaizentorch/" target="_blank" rel="noopener" aria-label="Kaizen Torch on Instagram"><svg viewBox="0 0 24 24"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4zM17.3 5.5a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4zM12 2.6c2.6 0 2.9 0 3.9.1 2.6.1 3.8 1.4 3.9 3.9.1 1 .1 1.3.1 3.9s0 2.9-.1 3.9c-.1 2.5-1.3 3.8-3.9 3.9-1 .1-1.3.1-3.9.1s-2.9 0-3.9-.1c-2.6-.1-3.8-1.4-3.9-3.9-.1-1-.1-1.3-.1-3.9s0-2.9.1-3.9C4.3 4 5.5 2.8 8.1 2.7c1-.1 1.3-.1 3.9-.1zM12 1C9.3 1 9 1 7.9 1 4.4 1.2 2.4 3.2 2.2 6.8 2.1 7.9 2 8.2 2 11s0 3.1.1 4.2c.2 3.6 2.2 5.6 5.8 5.8 1.1.1 1.4.1 4.1.1s3.1 0 4.2-.1c3.6-.2 5.6-2.2 5.8-5.8.1-1.1.1-1.4.1-4.2s0-3.1-.1-4.2C21.8 3.2 19.8 1.2 16.2 1 15.1 1 14.7 1 12 1z"/></svg></a>
+          <a href="https://www.tiktok.com/@kaizentorch" target="_blank" rel="noopener" aria-label="Kaizen Torch on TikTok"><svg viewBox="0 0 24 24"><path d="M16.6 2h-3.3v13.4a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .9.1V9.2a6.3 6.3 0 1 0 5.3 6.2V8.6a7.9 7.9 0 0 0 4.6 1.5V6.8a4.6 4.6 0 0 1-4.6-4.8z"/></svg></a>
+          <a href="https://www.linkedin.com/company/kaizentorch/" target="_blank" rel="noopener" aria-label="Kaizen Torch on LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.2c0-1.2 0-2.9-1.8-2.9s-2 1.4-2 2.8V21h-4z"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__giant" aria-hidden="true">One soul at a time</div>
+    <div class="container footer__bottom">
+      <span>Kaizen Torch • One ecosystem • Seven pillars</span>
+      <a href="https://kaizentorch.com/privacy-notice-forms/" target="_blank" rel="noopener">Privacy notice</a>
+      <span>© 2026 Kaizen Torch. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <button class="to-top" id="toTop" aria-label="Scroll to top of page">↑</button>
+
+  <!-- ============ MODALS ============ -->
+  <div class="modal" id="juryModal" role="dialog" aria-modal="true" aria-labelledby="jmName" hidden>
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__card modal__card--jury">
+      <button class="modal__close" data-close aria-label="Close profile">×</button>
+      <div class="jm__photo"><img id="jmImg" src="" alt="" /></div>
+      <div class="jm__body">
+        <p class="eyebrow">Kaizen Torch Architect</p>
+        <h3 id="jmName"></h3>
+        <p class="jm__title" id="jmTitle"></p>
+        <p class="jm__bio" id="jmBio"></p>
+        <div class="jm__links" id="jmLinks"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="portalModal" role="dialog" aria-modal="true" aria-labelledby="pmTitle" hidden>
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__card modal__card--portal">
+      <button class="modal__close" data-close aria-label="Close">×</button>
+      <div class="pm__media"><img id="pmImg" src="" alt="" /><video id="pmVideo" muted loop playsinline preload="none"></video></div>
+      <div class="pm__body">
+        <p class="eyebrow" id="pmKicker"></p>
+        <h3 id="pmTitle"></h3>
+        <div id="pmText"></div>
+        <ul class="pm__facts" id="pmFacts"></ul>
+        <a class="btn btn--gold" id="pmAction" href="#"><span>Register interest</span><i class="btn__arrow">→</i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ SCRIPTS ============ -->
+  <script src="js/vendor/gsap.min.js"></script>
+  <script src="js/vendor/ScrollTrigger.min.js"></script>
+  <script src="js/vendor/lenis.min.js"></script>
+  <script src="js/data-generated.js"></script>
+  <script src="js/content.js"></script>
+  <script src="js/coin-textures.js"></script>
+  <script src="js/hero3d.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
